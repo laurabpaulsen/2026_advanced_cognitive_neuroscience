@@ -5,3 +5,4 @@ ipywidgets
 pandas
 scikit-learn
 ipympl
+h5io
