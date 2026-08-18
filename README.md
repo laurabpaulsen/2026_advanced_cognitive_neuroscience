@@ -42,7 +42,7 @@ This latter command can be run when initialising the job. See *Additional parame
 
 #### Do it
 
-Now, create your virtual environment and check that you can run Coder Python (use version **1.103.1**)
+Now, create your virtual environment and check that you can run Coder Python (use version **1.131.0**)
 
 ### Local environment
 
