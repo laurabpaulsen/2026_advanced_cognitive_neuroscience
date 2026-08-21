@@ -3,7 +3,7 @@ from pathlib import Path
 # PATHS
 ROOT = Path("/work")
 RAW_PATH = ROOT / "raw"
-
+SUBJECTS_DIR = ROOT / "freesurfer"
 
 # determining the user to find a nice place to save derivatives 
 p = Path(__file__)
@@ -15,10 +15,12 @@ uCloud_user = next(
 
 
 DERIVATIVES_PATH = ROOT / uCloud_user / "derivatives"
+MEG_PATH = DERIVATIVES_PATH / "MEG"
 
-if not DERIVATIVES_PATH.exists():
-    DERIVATIVES_PATH.mkdir(parents=True)
-    print(f"Could not find derivatives path. It has been created at {DERIVATIVES_PATH}")
+if not MEG_PATH.exists():
+    MEG_PATH.mkdir(parents=True)
+    print(f"Could not find derivatives path. It has been created at {MEG_PATH}")
+
 
 
 # PREPROCESSING PARAMETERS
@@ -40,3 +42,6 @@ BASELINE = (None, 0) # from tmin to time of stimulation
 DOWNSAMPLE_RATE = 250
 
 
+# SOURCE MODELLING
+SRC_SPACING = "oct6"
+VOL_SPACING = 10
