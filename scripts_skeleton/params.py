@@ -27,6 +27,11 @@ EPOCHS_TMAX = 0.7
 BASELINE = (None, 0) # from tmin to time of stimulation
 DOWNSAMPLE_RATE = 250
 
+# ICA
+N_ICA_COMPONENTS = 0.99
+ICA_METHOD = "fastica"
+RANDOM_STATE = 42
+
 
 # ------------------------------------------------------------------
 # SOURCE MODELLING
@@ -64,6 +69,8 @@ fnames.add('sub_raw', '{raw}/{subject}/{date}/workshop_2025_raw.fif')
 
 # subject level derivatives
 fnames.add('sub_filtered', '{sub_meg_derivatives}/{subject}_filtered_{l_freq}-{h_freq}_{method}_meg.fif')
+fnames.add('sub_filtered_ica', '{sub_meg_derivatives}/{subject}_filtered_{l_freq}-{h_freq}_{method}_ICA_meg.fif')
+fnames.add('sub_ica', '{sub_meg_derivatives}/{subject}_ica.fif')
 
 # reports
 fnames.add('reports', '{derivatives}/reports')
