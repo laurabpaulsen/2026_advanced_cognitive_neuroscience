@@ -8,11 +8,11 @@ from utils.fnames import FileNames
 
 ## list of bad channels for each subject
 BAD_CHANNELS = {
-    "0164": [],
+    "example": ["MEG0121", "MEG192"],
 }
 
 DATES = {
-    "0164": "20251003_000000",
+    "example": "20251003_000000",
 }
 
 ## Filtering
@@ -36,7 +36,6 @@ RANDOM_STATE = 42
 # ------------------------------------------------------------------
 # SOURCE MODELLING
 # ------------------------------------------------------------------
-
 SRC_SPACING = "oct6"
 VOL_SPACING = 10
 
@@ -55,10 +54,10 @@ uCloud_user = next(
 
 fnames = FileNames()
 fnames.add('root', '/work')
-fnames.add('raw', '{root}/_raw')
+fnames.add('raw', '{root}/raw')
 
 
-fnames.add('subjects_dir', '{root}/_freesurfer')
+fnames.add('subjects_dir', '{root}/freesurfer')
 fnames.add('ucloud_memberfiles', '{root}'+f'/{uCloud_user}')
 fnames.add('derivatives', '{ucloud_memberfiles}/derivatives')
 fnames.add('meg_derivatives', '{derivatives}/MEG')
@@ -71,6 +70,8 @@ fnames.add('sub_raw', '{raw}/{subject}/{date}/workshop_2025_raw.fif')
 fnames.add('sub_filtered', '{sub_meg_derivatives}/{subject}_filtered_{l_freq}-{h_freq}_{method}_meg.fif')
 fnames.add('sub_filtered_ica', '{sub_meg_derivatives}/{subject}_filtered_{l_freq}-{h_freq}_{method}_ICA_meg.fif')
 fnames.add('sub_ica', '{sub_meg_derivatives}/{subject}_ica.fif')
+fnames.add('sub_filtered_ica_epochs', '{sub_meg_derivatives}/{subject}_filtered_{l_freq}-{h_freq}_{method}_ICA-epo.fif')
+
 
 # reports
 fnames.add('reports', '{derivatives}/reports')
