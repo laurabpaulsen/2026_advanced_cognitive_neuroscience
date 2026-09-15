@@ -8,7 +8,7 @@ from utils.logger import setup_report, save_report
 
 
 if __name__ == "__main__":
-    parser = setup_argparser(description="Run ICA decomposition of the data and identify artefact components", subject=True)
+    parser = setup_argparser(description="Epoch the data", subject=True)
     args = parser.parse_args()
     subject = args.subject
 
@@ -33,12 +33,13 @@ if __name__ == "__main__":
     # hint hint hints: 
     #   https://mne.tools/stable/generated/mne.Report.html#mne.Report.add_events
     #   https://mne.tools/stable/generated/mne.Report.html#mne.Report.add_epochs
+    # maybe also take a look at the photodiode notebook?
     # ------------------------------------------------------------------
 
 
 
     # ------------------------------------------------------------------
-    # Save epochs. Remember to include relevant 
+    # Save epochs. Remember to include relevant parameters in file name
     # ------------------------------------------------------------------
 
 
