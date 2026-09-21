@@ -47,7 +47,7 @@ if __name__ == "__main__":
         title="Raw data", 
         psd=True,  # PSD useful for identifying noisy/bad channels
         butterfly=20, # show 20 segments 
-        replace=True    
+        replace=True
     )
     
     # ------------------------------------------------------------------
@@ -61,7 +61,13 @@ if __name__ == "__main__":
     filtered_path.parent.mkdir(parents=True, exist_ok=True)
     raw_filtered.save(filtered_path, overwrite=True)
 
-    report.add_raw(raw_filtered, title=f"Filtered data ({L_FREQ}-{H_FREQ} Hz)", psd=True, butterfly=20, replace=True)
+    report.add_raw(
+        raw_filtered, 
+        title=f"Filtered data ({L_FREQ}-{H_FREQ} Hz)", 
+        psd=True, 
+        butterfly=20, 
+        replace=True
+    )
     
     del raw_filtered
 
