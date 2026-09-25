@@ -13,9 +13,9 @@ The purpose of the notebooks in this repository is to provide you with some code
 
 * `headmovement_chpi.ipynb`: Shows how to use the continuous HPI recordings to determine how much the participant moved during the experiment.
 
-*Coming soon to a GitHub repo near you:*
-
 * `source_recon.ipynb`: Illustrates the steps involved in setting up the source space, computing the forward model and  the data for source reconstruction.
+
+*Coming soon to a GitHub repo near you:*
 
 * `MVPA.ipynb`: Illustrates how to prepare the data and perform multivariate pattern analysis (MVPA), including regressing out the effect of contrast. 
 
@@ -28,9 +28,9 @@ The skeleton scripts in the `scripts_skeleton` folder are designed to guide you 
 * `03_filter.py`
 * `04_ica.py`
 * `05_epochs.py`
+* `06_stcs.py`
 
 *Coming soon to a GitHub repo near you:*
-* `06_stcs.py`
 * `07_evoked.py`
 * `08_erf_stats.py`
 
@@ -48,7 +48,7 @@ To guide you, here is a table showing which notebooks may contain relevant code 
 | `03_filter.py`  | `filter_ica_epochs.ipynb`                                                           | Adding bad channels to `info` and filtering.                                                                                     |
 | `04_ica.py`     | `filter_ica_epochs.ipynb`                                                           | ICA / artifact removal.                                                                                                          |
 | `05_epochs.py`  | `filter_ica_epochs.ipynb`, `photodiode.ipynb`, `add_epoch_metadata.ipynb` | Accounting for the delay between the trigger and stimulus onset, creating epochs, and adding behavioural metadata to the epochs. |
-
+| `06_stcs.py`  | `source_recon.ipynb` | Compute source time courses from epochs using a minimum-norm inverse solution, then morph them to fsaverage for group-level analysis.|
 ## Other files
 
 | File        | Notes                                                                                                                                                                                       |
